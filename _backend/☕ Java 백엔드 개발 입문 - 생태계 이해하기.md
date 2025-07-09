@@ -1,6 +1,6 @@
 ---
 title: ☕  Java 백엔드 개발 입문 - 생태계 이해하기
-date: 2015-08-14
+date: 2025-07-09
 tags:
   - Java
 category: Java
