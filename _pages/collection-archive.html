@@ -1,0 +1,31 @@
+---
+layout: archive
+title: "Posts by Collection"
+permalink: /collection-archive/
+author_profile: true
+---
+
+{% include base_path %}
+{% capture written_label %}'None'{% endcapture %}
+
+{% for collection in site.collections %}
+  {% assign label = collection.label %}
+  {% unless collection.output == false or label == "posts" %}
+    {% if label != written_label %}
+      <div class="collection-section" id="{{ label | slugify }}">
+        <h2 class="collection-title"> {{ label | capitalize }}</h2>
+        {% assign written_label = label %}
+    {% endif %}
+      {% for post in collection.docs %}
+        {% unless post.title == nil or post.url == nil %}
+          <div class="post-card">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a><br>
+            {% if post.date %}
+              <small>{{ post.date | date: "%Y-%m-%d" }}</small>
+            {% endif %}
+          </div>
+        {% endunless %}
+      {% endfor %}
+      </div>
+  {% endunless %}
+{% endfor %}

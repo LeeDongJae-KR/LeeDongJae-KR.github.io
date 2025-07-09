@@ -1,0 +1,28 @@
+.sitemap-section {
+  margin: 2rem 0;
+}
+
+.sitemap-item {
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 10px;
+  background-color: #3a3a3a; 
+  transition: background-color 0.2s ease;
+}
+
+.sitemap-item:hover {
+  background-color: #4a4a4a;
+}
+
+.sitemap-item a {
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h2 {
+  color: #ffffff;
+  border-bottom: 1px solid #777;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}

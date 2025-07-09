@@ -1,0 +1,32 @@
+---
+layout: archive
+permalink: /frontend/
+title: "Frontend"
+author_profile: true
+---
+
+{% include base_path %}
+
+{% assign posts = site.frontend %}
+
+{% assign categories = "" | split: "" %}
+{% for post in posts %}
+  {% for category in post.categories %}
+    {% unless categories contains category %}
+      {% assign categories = categories | push: category %}
+    {% endunless %}
+  {% endfor %}
+{% endfor %}
+
+{% assign categories = categories | sort %}
+
+{% for category in categories %}
+  <div class="sitemap-section">
+    <h2 id="{{ category | slugify }}" class="archive__subtitle">📂 {{ category | capitalize }}</h2>
+    {% for post in posts %}
+      {% if post.categories contains category %}
+        {% include archive-single.html post=post %}
+      {% endif %}
+    {% endfor %}
+  </div>
+{% endfor %}

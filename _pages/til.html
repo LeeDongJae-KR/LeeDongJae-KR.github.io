@@ -1,0 +1,12 @@
+---
+layout: archive
+title: "Today I Learned"
+permalink: /til/
+author_profile: true
+---
+
+{% include base_path %}
+
+{% for post in site.til reversed %}
+  {% include archive-single.html %}
+{% endfor %}

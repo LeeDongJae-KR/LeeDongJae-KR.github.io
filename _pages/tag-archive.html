@@ -1,0 +1,25 @@
+---
+layout: archive
+permalink: /tags/
+title: "Posts by Tags"
+author_profile: true
+---
+
+{% include base_path %}
+
+{% assign all_docs = "" | split: "" %}
+{% for collection in site.collections %}
+  {% unless collection.label == "posts" and collection.output == false %}
+    {% assign all_docs = all_docs | concat: collection.docs %}
+  {% endunless %}
+{% endfor %}
+
+{% include group-by-array collection=all_docs field="tags" %}
+
+{% for tag in group_names %}
+  {% assign posts = group_items[forloop.index0] %}
+  <h2 id="{{ tag | slugify }}" class="archive__subtitle">{{ tag }}</h2>
+  {% for post in posts %}
+    {% include archive-single.html post=post %}
+  {% endfor %}
+{% endfor %}
