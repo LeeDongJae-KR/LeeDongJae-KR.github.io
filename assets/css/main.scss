@@ -3,40 +3,35 @@
 
 /*
  * This file controls what is imported from /_sass
- *
- * Note that the files are processed in the order they are imported, so they are partly
-   sorted by the dependencies. Also, the first two lines of the file are required by Jekyll.
+ * The files are processed in the order they are imported.
  */
 
-@import
-    "vendor/breakpoint/breakpoint",
+@import "vendor/breakpoint/breakpoint";
+@import "themes";
+@import "theme/default";
+@import "theme/dark";
 
-    "themes",
-    "theme/default",
-    "theme/dark",
+@import "include/mixins";
+@import "vendor/susy/susy";
 
-    "include/mixins",
-    "vendor/susy/susy",
+@import "layout/reset";
+@import "layout/base";
 
-    "layout/reset",
-    "layout/base",
+@import "include/utilities";
+@import "layout/tables";
+@import "layout/buttons";
+@import "layout/notices";
+@import "layout/masthead";
+@import "layout/navigation";
+@import "layout/footer";
+@import "syntax";
 
-    "include/utilities",
-    "layout/tables",
-    "layout/buttons",
-    "layout/notices",
-    "layout/masthead",
-    "layout/navigation",
-    "layout/footer",
-    "syntax",
+@import "layout/forms";
 
-    "layout/forms",
+@import "layout/page";
+@import "layout/archive";
+@import "layout/sidebar";
 
-    "layout/page",
-    "layout/archive",
-    "layout/sidebar",
-
-    "vendor/font-awesome/fontawesome",
-    "vendor/font-awesome/solid",
-    "vendor/font-awesome/brands"
-;
+@import "vendor/font-awesome/fontawesome";
+@import "vendor/font-awesome/solid";
+@import "vendor/font-awesome/brands";

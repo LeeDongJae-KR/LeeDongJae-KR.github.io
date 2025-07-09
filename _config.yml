@@ -15,7 +15,7 @@ name                     : &name "이동재"
 description              : &description "풀스택 개발자로의 성장 여정을 기록합니다."
 url                      : "https://leedongjae-kr.github.io" # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "LeeDongJae-KR/dongaje.github.io"
+repository               : "LeeDongJae-KR/LeeDongJae-KR.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -307,7 +307,6 @@ kramdown:
 sass:
   sass_dir: _sass
   style: compressed # http://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
-
 
 # Outputting
 permalink: /:categories/:title/
